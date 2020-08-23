@@ -157,3 +157,14 @@ describe("average", function () {
     expect(lst.average()).toBe(0);
   });
 });
+
+describe("Reverses", function () {
+  it("Reverses the list", function () {
+    let lst = new DoublyLinkedList([1, 2, 3, 4]);
+    lst.reverse();
+    expect(lst.head.val).toBe(4);
+    expect(lst.head.next.val).toBe(3);
+    expect(lst.head.next.next.val).toBe(2);
+    expect(lst.head.next.next.next.val).toBe(lst.tail.val);
+  });
+});

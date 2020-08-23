@@ -201,12 +201,18 @@ class DoublyLinkedList {
       for (let i = 0; i < this.length; i++) {
         sum += currentNode.val;
         currentNode = currentNode.next;
+        average = sum / this.length;
       }
-      average = sum / this.length;
     }
     return average;
   }
   reverse() {
+    if (this.length == 0) {
+      return "List is empty";
+    }
+    if (this.length == 1) {
+      return;
+    }
     let currentNode = this.head;
     while (currentNode) {
       let nextNode = currentNode.next;

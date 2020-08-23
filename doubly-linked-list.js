@@ -209,10 +209,10 @@ class DoublyLinkedList {
   reverse() {
     let currentNode = this.head;
     while (currentNode) {
-      let save = currentNode.next;
+      let nextNode = currentNode.next;
       currentNode.next = currentNode.prev;
-      currentNode.prev = save;
-      currentNode = save;
+      currentNode.prev = nextNode;
+      currentNode = nextNode;
     }
     let formerTail = this.tail;
     this.tail = this.head;
